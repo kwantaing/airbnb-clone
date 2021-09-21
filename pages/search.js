@@ -3,6 +3,8 @@ import Footer from "../components/Footer";
 import { useRouter } from "next/router";
 import { format } from "date-fns";
 import InfoCard from "../components/InfoCard";
+import 'react-date-range/dist/styles.css'; // main style file
+import 'react-date-range/dist/theme/default.css'; // theme css file
 
 const Search = ({ searchResults }) => {
 	console.log(searchResults);
