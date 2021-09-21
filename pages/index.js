@@ -5,6 +5,8 @@ import Header from "../components/Header";
 import LargeCard from "../components/LargeCard";
 import MediumCard from "../components/MediumCard";
 import SmallCard from "../components/SmallCard";
+import 'react-date-range/dist/styles.css'; // main style file
+import 'react-date-range/dist/theme/default.css'; // theme css file
 
 export default function Home({ exploreData, cardsData }) {
 	return (
@@ -45,7 +47,7 @@ export default function Home({ exploreData, cardsData }) {
 					buttonText="Get Inspired"
 				/>
 			</main>
-      <Footer></Footer>
+			<Footer></Footer>
 		</div>
 	);
 }
