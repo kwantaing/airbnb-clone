@@ -22,7 +22,7 @@ const Search = ({ searchResults }) => {
 				}`}
 			/>
 			<main className="grid pb-5 pt-5 pl-10 pr-10 xl:grid-cols-5  space-x-2">
-				<section className="xl:col-span-3 xl:max-h-screen xl:overflow-scroll xl:scrollbar-hide">
+				<section className="xl:col-span-3 xl:overflow-scroll xl:scrollbar-hide xl:max-h-[92vh]">
 					<p className="text-xs">
 						300+ Stays | {range} for {noOfGuests}{" "}
 						{noOfGuests == 1 ? "guest" : "guests"}
@@ -66,7 +66,7 @@ const Search = ({ searchResults }) => {
 						)}
 					</div>
 				</section>
-				<section className="hidden xl:inline-flex xl:min-w-full xl:col-span-2 xl:max-h-screen  border shadow-xl">
+				<section className="hidden xl:inline-flex xl:min-w-full xl:col-span-2 border shadow-xl xl:max-h-[92vh]">
 					<Map searchResults={searchResults} />
 				</section>
 			</main>
