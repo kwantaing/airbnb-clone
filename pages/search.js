@@ -22,7 +22,7 @@ const Search = ({ searchResults }) => {
 				}`}
 			/>
 			<main className="grid pl-10 pr-10 xl:grid-cols-5">
-				<section className="m-5 xl:col-span-3 xl:max-h-screen xl:overflow-y-scroll">
+				<section className="m-5 xl:col-span-3 xl:max-h-screen xl:overflow-scroll xl:scrollbar-hide">
 					<p className="text-xs">
 						300+ Stays | {range} for {noOfGuests}{" "}
 						{noOfGuests == 1 ? "guest" : "guests"}
