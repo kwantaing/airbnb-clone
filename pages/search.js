@@ -3,11 +3,11 @@ import Footer from "../components/Footer";
 import { useRouter } from "next/router";
 import { format } from "date-fns";
 import InfoCard from "../components/InfoCard";
-import 'react-date-range/dist/styles.css'; // main style file
-import 'react-date-range/dist/theme/default.css'; // theme css file
+import "react-date-range/dist/styles.css"; // main style file
+import "react-date-range/dist/theme/default.css"; // theme css file
+import Map from "../components/Map";
 
 const Search = ({ searchResults }) => {
-	console.log(searchResults);
 	const router = useRouter();
 	const { location, startDate, endDate, noOfGuests } = router.query;
 
@@ -21,8 +21,8 @@ const Search = ({ searchResults }) => {
 					noOfGuests == 1 ? "guest" : "guests"
 				}`}
 			/>
-			<main className="flex pl-10 pt-10 justify-center">
-				<section>
+			<main className="grid pl-10 pr-10 xl:grid-cols-5">
+				<section className="m-5 xl:col-span-3 xl:max-h-screen xl:overflow-y-scroll">
 					<p className="text-xs">
 						300+ Stays | {range} for {noOfGuests}{" "}
 						{noOfGuests == 1 ? "guest" : "guests"}
@@ -48,7 +48,7 @@ const Search = ({ searchResults }) => {
 								price,
 								star,
 								title,
-								total
+								total,
 							}) => (
 								<InfoCard
 									key={img}
@@ -65,6 +65,9 @@ const Search = ({ searchResults }) => {
 							)
 						)}
 					</div>
+				</section>
+				<section className="hidden xl:inline-flex xl:col-span-2 xl:max-h-screen m-5">
+					<Map searchResults={searchResults} />
 				</section>
 			</main>
 			<Footer />
