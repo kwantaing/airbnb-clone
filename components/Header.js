@@ -78,7 +78,7 @@ const Header = ({ placeholder }) => {
       </div>
 
       {searchInput && (
-        <div className="flex flex-col col-span-3 mx-auto">
+        <div className="flex flex-col col-span-3 mx-auto hide_definedDateSelections">
           <DateRangePicker
             ranges={[selectionRange]}
             minDate={new Date()}
